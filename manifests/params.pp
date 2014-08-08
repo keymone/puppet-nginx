@@ -42,7 +42,7 @@ class nginx::params {
   $nx_spdy                           = off
   $nx_ssl_stapling                   = off
 
-  $nx_proxy_redirect                 = off
+  $nx_proxy_redirect                 = undef
   $nx_proxy_set_header               = [
     'Host $host',
     'X-Real-IP $remote_addr',

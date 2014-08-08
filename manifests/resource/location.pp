@@ -179,7 +179,6 @@ define nginx::resource::location (
   if ($proxy != undef) {
     validate_string($proxy)
   }
-  validate_string($proxy_redirect)
   validate_string($proxy_read_timeout)
   validate_string($proxy_connect_timeout)
   validate_array($proxy_set_header)

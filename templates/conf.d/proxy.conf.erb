@@ -1,6 +1,8 @@
 proxy_temp_path         <%= @proxy_temp_path %>;
 client_body_temp_path   <%= @client_body_temp_path %>;
+<% if @proxy_redirect -%>
 proxy_redirect          <%= @proxy_redirect %>;
+<% end -%>
 client_max_body_size    <%= @client_max_body_size %>;
 client_body_buffer_size <%= @client_body_buffer_size %>;
 proxy_connect_timeout   <%= @proxy_connect_timeout %>;
