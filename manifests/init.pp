@@ -114,7 +114,7 @@ class nginx (
   if (!is_integer($worker_connections)) {
     fail('$worker_connections must be an integer.')
   }
-  if (!is_integer($worker_rlimit_nofile)) {
+  if ($worker_rlimit_nofile != undef and !is_integer($worker_rlimit_nofile)) {
     fail('$worker_rlimit_nofile must be an integer.')
   }
   if (!is_string($events_use)) and ($events_use != false) {
